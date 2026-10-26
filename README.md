@@ -20,11 +20,17 @@ A documentação completa (objetivo, funcionalidades, endpoints, MER, diagrama d
 - IntelliJ IDEA (ou `mvn spring-boot:run`)
 - Acesso ao Oracle da FIAP (`oracle.fiap.com.br:1521`)
 
+A aplicação lê as credenciais do banco via variáveis de ambiente (não ficam no código):
+
 ```
 git clone git@github.com:MatheusC0625/Sprint4Java.git
 cd Sprint4Java
+export DB_USER=<seu usuario oracle>
+export DB_PASSWORD=<sua senha oracle>
 mvn spring-boot:run
 ```
+
+No IntelliJ: *Run → Edit Configurations → Environment variables* e adicione `DB_USER` e `DB_PASSWORD`.
 
 A aplicação sobe em `http://localhost:8080`.
 
