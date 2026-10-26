@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class ConnectionFactory {
 
-    private static final String URL = "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl";
-    private static final String USER = "rm573146";
-    private static final String PASSWORD = "REDACTED";
+    private static final String URL = env("DB_URL", "jdbc:oracle:thin:@oracle.fiap.com.br:1521:orcl");
+    private static final String USER = env("DB_USER", null);
+    private static final String PASSWORD = env("DB_PASSWORD", null);
 
     public static Connection getConnection() throws SQLException {
         try {
@@ -17,6 +17,11 @@ public class ConnectionFactory {
             throw new SQLException("Driver do Oracle nao encontrado no classpath", e);
         }
         return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    private static String env(String key, String defaultValue) {
+        String value = System.getenv(key);
+        return value != null ? value : defaultValue;
     }
 
 }
