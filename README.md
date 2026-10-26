@@ -9,7 +9,6 @@ API RESTful em Spring Boot para o sistema de missões de sustentabilidade do Gua
 - API: https://sprint4java-api.onrender.com
 - Swagger: https://sprint4java-api.onrender.com/swagger-ui/index.html
 
-> Plano gratuito do Render: a instância hiberna após ~15 min sem uso. A primeira chamada após esse período pode levar de 30 a 60 segundos.
 
 ## Documentação
 
@@ -32,3 +31,7 @@ A aplicação sobe em `http://localhost:8080`.
 ## Equipe
 
 NUVA — Matheus Costa Rodrigues dos Santos — RM 573146 — Turma 1TDSPV
+
+## Uso de IA
+
+Declaro o uso de IA (Claude) neste projeto, para: revisão de código, testes da API local e no deploy do Render, orientação sobre boas práticas de segurança (remoção de credenciais do código) e apoio na configuração do GitHub. Qualquer dúvida, fico à disposição.
